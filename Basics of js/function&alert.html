@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function message() {
+           alert("Hello");
+        }
+
+
+        function message2(n) {   // this is function with parameters in bracket().
+            alert("Hello "+n);   // here we have given parameters as (n).
+        }
+
+
+         function message3(x) {     //   function message3(5) {
+            return (x*x);           //   return (5*5);
+        }                           //    }
+
+
+         function calsquare(ele) //ele=element
+        {
+            var n=parseInt(ele.value);  //retrieving the value of ele
+            console.log(n, typeof(n));
+            alert("Square="+message3(n));                                         
+        }
+        /*as we have given input type=text, so the input user gives will convert into 
+         string even if it is a number, so parseInt is written to convert the value in 
+         integer .
+         In javascript we can call 1 funtion in another if the working is too long.
+        */
+
+        /*STEPS:-
+        1.]Firstly we are calling calsquare() function on textbox.
+        2.]Suppose we pass the number 5, so this value will go to the calsquare() function
+           in the (ele.value) in var(n). so now var n=5;
+        3.]Suppose our working is too big so we have created another function named as
+           "message3" and we are passing the value 5 in it. so it will look like 
+            message3(5) and (5*5).
+        4.]Now this value of (n) will be returned in the alert("square="+message3(n)) as we 
+            haved called the function "message3" here .                        
+        */
+        
+      
+    </script>
+</head>
+<body>
+  
+  <button type="button" onclick="message()" id="message1">click here</button>
+  <br><br>
+  <!--  This is button on which alert is created  --> 
+
+
+    
+  <input type="text" id="message2" onchange="message2(this.value)"></button> 
+  <br><br>
+  <!-- 
+   1.](this.value) represents value in the specific line of code taken from user .
+   2.]onchnage is a just like onclick but here as the change is made in the input its runs.
+  -->
+
+  <input type="text" id="message3" onchange="calsquare(this);">
+  <br><br>
+  <!-- Here we will do some calculations.
+   1.]Here we have given(this)and not (this.value) because we are sending thr hole object
+      and not just value. 
+  -->
+
+    
+</body>
+</html>
