@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /* Arrow function synrax
+       let/var functionname = (parameters) => expression
+
+       // The arrow function compulsory returns the expression.
+       // parameters are not compulsory .
+       // working of arrow function and normal function is same only syntax is different.
+    */
+
+    let sum1 = (v, g) => v + g;
+    
+
+    let sum2 = (a, b) => {
+      let result = (a + b);
+      alert (result);
+      
+    }
+    </script>
+</head>
+<body>
+    <button onclick="alert(sum1(6,1));">try it</button> <!-- here we are passing the parameters-->
+    <button onclick="alert(sum2(2,3));">try it</button> 
+</body>
+</html>
