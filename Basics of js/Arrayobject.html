@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    // Array and 3 ways to write array :-
+      
+       // 1.] 1st way
+        var arr=['Audi' , 'volvo' , 'BMW'];  //Object
+        console.log("Array=",arr, typeof(arr));
+        
+
+
+        // 2.] 2nd way
+        var student = new Array(101,'Amit','Kumar',25); //Object
+        console.log("Student=",student, typeof(student));
+        console.log(student.length);
+        
+        
+
+        // 3.] 3rd way
+        var cars=new Array();
+        cars[0]="Audi";
+        cars[1]="Volvo";
+        cars[2]="BMW";
+        console.log("cars", cars[2]);   // output=BMW
+        console.log(typeof(cars));
+
+
+//----------------------------------------------------------------------------------------   
+           
+       // Object:-
+       // Everthing in js is object and to access the property we write like this- [""].
+       // Eg : person["lastName"]
+       // Eg:1
+        var person={   //Object
+            
+            firstName:"John",
+            lastName:"Doe",
+            age:30,
+            isMarried:false,
+            rollno:101 
+        };
+        console.log("Person=",person, typeof(person));
+        //You can address the object properties in two ways:
+        // If you want individual element ypu can write like this:
+        console.log("First Name:",person.firstName); 
+        console.log("Last Name:",person["lastName"]); /* the key is string so we will
+        write in ("") double quotes.*/
+       
+        //Eg:2
+        var person=new Object();
+        person.firstname="John";
+        person.lastname="Doe";
+        person.age=50;
+        person.eyecolor="blue"; 
+        console.log(person.firstname + " is " + person.age + " years old.");
+
+     
+//---------------------------------------------------------------------------------------
+
+     // This is built-in object that gives us current date and time.
+
+        var today=new Date(); //Object. 
+        console.log("Today=",today, typeof(today));
+
+//----------------------------------------------------------------------------------------
+
+
+     // String variable and String Object:-
+        // Eg:1
+        var firstName1="John";  //String variable
+        var firstName2=new String("John"); //String Object 
+        console.log("First Name1=",firstName1, typeof(firstName1)); // op:John
+        console.log("First Name2=",firstName2, typeof(firstName2));
+        /* op:First Name2= String {'John'}
+                          0:"J"
+                          1:"o"
+                          2:"h"
+                          3:"n"
+                          length:4
+        By default string is a character array, and here the key value pair are not given
+        so the it took the data as individual ie. it shows collection of character.               
+        */
+
+        var txt="abcd";
+        console.log(txt.length);
+        console.log(txt.toUpperCase());
+
+
+        
+//----------------------------------------------------------------------------------------       
+
+        var num8=100;  //Number variable
+        var num9=new Number(100); //Number Object       
+        console.log("Num8=",num8, typeof(num8));     // output:number  
+        console.log("Num9=",num9, typeof(num9));     // output:object   
+    
+
+//-------------------------------------------------------------------------------------------
+
+ // ArrayObject with prototype:
+
+ <button onclick="myFunction()">Try it</button>
+
+ Array.prototype.myUcase=function()   //created a prototype.
+ {
+ for (i=0;i<this.length;i++)
+   {
+     this[i]=this[i].toUpperCase();   // method to convert the array in uppercase.
+   }
+}
+
+  function myFunction()
+ {
+ var fruits = ["Banana", "Orange", "Apple", "Mango"];
+ fruits.myUcase();   // calling the function(prototype)
+ var x=document.getElementById("demo");
+ x.innerHTML=fruits;
+ }
+ </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
