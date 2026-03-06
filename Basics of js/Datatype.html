@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script>
+
+
+        // 1.] string:
+
+        var fname="john";
+        var lname='Doe';
+        console.log(fname,lname);
+        console.log(fname +" "+ lname) //another way to get output with space .
+
+        /* Eg of string using concat(+) and how to give space.
+        console.log alreay give space in between but this is useful in document.write 
+        and document.getElementById and many more..
+        this is the way to contact multiple line of code together.
+        so here we will take a var num1 which stored numerical value ie. 1 
+        and we will another var num2 as string which also stores number value ie."8"
+        anything written in quotes becomes string so the num2 is string eventhough 
+        numerical vale is stored in it. 
+        
+        */
+        var num1=1;
+        var num2="8";
+        console.log(num1 + "" + num2); // no space inside ("") double quotes, output=18
+        console.log(num1 + " " + num2); // space in (" ") double quotes, output=1 8
+        
+
+        console.log("Student Name: 'Amit Kumar'"); 
+        console.log('Student Name: "Amit Kumar"'); 
+        console.log(`"Student Name": 'Amit Kumar'`); 
+    
+       console.log(`Student Name: ${fname} ${lname}`); 
+       /*another way to write the code if you want to acess the var directly inside 
+        the sentence.*/
+
+       
+       
+       // 2.] Number:
+
+        var num1=10;   // Number
+        var num2=20.5; // Decimal number  
+        console.log("Num1=",num1," Num2=",num2); // Num1= 10  Num2= 20.5
+
+
+        var num3= 3.14e2; //Exponential number
+        var num4= 3.14e-2; // Negative Exponential number
+        console.log("Num3=",num3," Num4=",num4); // Num3= 314  Num4= 0.0314
+
+
+        var num5=0o234;  //Octal number
+        var num6=0xABCD; // Hexadecimal number
+        var num7=0b1011; // Binary number
+        console.log("Num5=",num5," Num6=",num6," Num7=",num7); 
+        // Num5= 156  Num6= 43981  Num7= 11
+
+
+
+       // 3.] Boolean:
+
+        var flag=false; //Boolean
+        console.log("Flag=",flag, typeof(flag)); // Flag= false boolean
+
+
+
+       // 4.] Undefined:
+
+        var n; // var is created with name (n) but value is not given.
+        console.log(typeof(n)); // the value of var(n) not given so it is undefined.
+
+
+
+      // 5.] Null:
+
+        m=null;
+        console.log(typeof(m));
+        
+    </script>
+</head>
+<body>
+  
+</body>
+</html>
