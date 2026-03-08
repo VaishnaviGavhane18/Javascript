@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!--
+------------------------------------------------------------------------------------------
+2.] if else statement :
+------------------------------------------------------------------------------------------
+if else:-(syntax)
+
+if (condition) 
+{
+  // code to execute
+} 
+
+else 
+{
+ // code to execute
+}
+
+
+ Eg:1 
+
+let age = 12;
+
+if ( age >= 18 ) {
+ console.log("You can vote")
+}
+
+else {
+  console.log("You cannot vote")           | OP= You cannot vote |
+}
+-->
+
+<br><br><br>
+
+<p>if-else code:</p>
+
+<button onclick="mydfunction()">Try it</button>
+
+<p id="demoo"></p>
+
+<script>
+function mydfunction()
+{
+var y="";
+var time=new Date().getHours();
+if (time<20)
+  {
+  y="Good day";
+  }
+else
+  {
+  y="Good evening";
+  }
+document.getElementById("demoo").innerHTML=y;
+}
+</script>
+
+
+</body>
+</html>
