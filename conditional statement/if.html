@@ -1,0 +1,37 @@
+<!--  CONDITIONAL STATEMENT  :  if , if else , if else if  .
+
+------------------------------------------------------------------------------------------
+1.] if statement :
+------------------------------------------------------------------------------------------
+if statement :-(syntax)
+
+if (condition) 
+{
+  // code to execute
+}
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <p>if statement code:</p>
+<button onclick="myfunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myfunction()
+{
+var a="";
+var time=new Date().getHours();
+if (time<20)
+  {
+  a="Good day";
+  }
+document.getElementById("demo").innerHTML=a;
+}
+</script>
+
+</body>
+</html>
