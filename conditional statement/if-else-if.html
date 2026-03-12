@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+------------------------------------------------------------------------------------------
+3.] if else if statement :
+------------------------------------------------------------------------------------------
+
+if else if :-(syntax)
+
+if (condition1)
+
+{
+  // code to execute
+} 
+
+else if (condition2) 
+{
+ // code to execute
+}
+else 
+{
+ // code to execute
+}
+
+
+// Eg:1
+var agee = 85;               // var "agee" is written because in the above code we have already taken var = "age" .
+if (agee == 18) {
+  //true
+  console.log("You are eligible for learning license");
+} else if (agee > 18 && agee <= 80) {
+  // true
+  console.log("You are eligibe for DL.");
+} else {
+  console.log("You are not eligible for DL.");        | OP= You are not eligible for DL.|
+}
+-->
+
+<br><br><br>
+<p>if-else-if code:</p>
+<script>
+function mydatefunction()
+{
+var x="";  // variable x declared
+var time=new Date().getHours(); // new object created for Date() method to get the current hour
+
+if (time>0 && time<=10)   // condition
+  {
+  x="Good morning";
+  }
+
+else if(time>10 && time<=16)  // condition
+  {
+  x="Good afternoon";
+  }
+
+else if(time>16 && time<=20)  // condition
+  {
+  x="Good day";
+  }
+
+else
+  {
+  x="Good evening";
+  }
+
+document.getElementById("demooo").innerHTML=x;
+}
+</script>
+
+<button onclick="mydatefunction()">Try it</button>
+
+<p id="demooo"></p>
+
+</body>
+</html>
