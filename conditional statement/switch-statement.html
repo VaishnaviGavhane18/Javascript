@@ -1,0 +1,107 @@
+<!----------------------------------------------------------------------------------------
+ Switch statement:- (syntax)
+------------------------------------------------------------------------------------------
+switch (key) {
+ case value:
+     break;
+
+  default:
+     break;
+}
+
+
+// Eg:1
+var userSelectedFruit = "Apple";
+
+switch (userSelectedFruit) {
+  case "Apple":
+    console.log("You have selected Apple.");
+    break;
+
+  case "Banana":
+    console.log("You have selected Banana.");
+    break;
+
+  case "Strawberry":
+    console.log("You have selected Strawberry.");
+    break;
+
+  default:
+    console.log("You have selected none of available fruit.");
+    break;
+}
+
+
+// Eg:2
+
+var userselectedcar = "BMW" ;
+
+switch (userselectedcar) {
+    case "Mercedez":
+      console.log("You have selected Mercedez");
+    break;
+
+    case "Fortunier":
+      console.log("You have selected Fortunier");
+    break;
+
+    case "BMW":
+      console.log("You have selected BMW");
+    break;
+
+    default :
+      console.log("You have selected none of the available car");
+    break;
+
+    }
+    
+  -->
+
+<!DOCTYPE html>
+<html>
+
+
+<script>
+function myFunction()
+{
+var x; //variable declaration ,dummy variable
+var d=new Date().getDay(); //getDay() method returns the day of the week in no format (0-6)
+switch (d)   
+  {
+  case 0:
+    x="Today is Sunday";
+    break;
+  case 1:
+    x="Today is Monday";
+    break;
+  case 2:
+    x="Today is Tuesday";
+    break;
+  case 3:
+    x="Today is Wednesday";
+    break;
+  case 4:
+    x="Today is Thursday";
+    break;
+  case 5:
+    x="Today is Friday";
+    break;
+  case 6:
+    x="Today is Saturday";
+    break;
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+<body>
+
+<p>Click the button to display what day it is today.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
+    
