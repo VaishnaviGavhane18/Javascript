@@ -1,0 +1,114 @@
+<!-- SOME IMPORTANT QUESTIONS ON LOOPS IN JAVASCRIPT :-
+
+    1.] How many loops are there in JavaScript?
+    Ans: There are mainly 3 loops in JavaScript.
+    a) for loop
+    b) while loop   
+    c) do...while loop
+
+    2.] what other loops are there in for-loop?
+    Ans: There are mainly 2 other loops in for-loop.
+    a) for...in loop   * It is an extension of for loop.
+    b) for...of loop   * It is an extension of for loop.
+    c) forEach loop    * It is a prototype of array. we can use it for array and object.
+    
+    -->
+
+<!----------------------------------------------------------------------------------------
+ 1.] FOR-LOOP :
+ ---------------------------------------------------------------------------------------
+ 
+  1.] Use of for-loops in JavaScript?
+  Ans: when you already know the number of repetetion like for eg you know you want to
+       print numbers from 1 to 10 then you can use for loop.
+
+ 
+ (Syntax):
+
+    for (initialization; condition; increment/decrement) {
+        // code to be executed
+    }
+
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];  //array 
+for (i=0; i<cars.length; i++)  
+{                               
+document.write(cars[i] + "<br>");
+}
+</script>
+
+<!-- 
+Output :
+BMW
+Volvo
+Saab
+Ford
+
+Explanation :
+Important points about the code above :-
+1.] i=0 means the i is 0 which is smaller than the length of the array cars(4) so it will 
+    print the value on indxe 0 which is BMW.
+2.] i++ means after each iteration the value of i will increase by 1. now i=1 which is 
+    again smaller than cars.length(4) so it will print the value on index 1 which is Volvo.
+3.] This process will continue until the value of i becomes equal to cars.length(4).
+4.] when i=4 the condition i<cars.length(4) becomes false and the loop stops executing.
+
+
+Q.] Working of the code step by step :-
+1.] We have created an array named cars with 4 elements.
+2.] We have used for loop to iterate through each element of the array.
+3.] i=0 is the initialization, i<cars.length is the condition, and i++ is the increment.
+4.] document.write(cars[i] + "<br>"); is used to print each element of the array on a
+    new line.
+5.] The loop will run until the condition i<cars.length is false.
+6.] Finally, all elements of the array are printed on the web page.
+
+
+
+EG:-2]
+-->
+<br><br>
+<p>for-loop ex:</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="";
+for (var i=1;i<=5;i++)
+  {
+  x=x + "The number is " + i + "<br>";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+
+<!-- 
+Output :
+The number is 1
+The number is 2
+The number is 3
+The number is 4
+The number is 5
+Explanation :
+1.] When the button is clicked, the function myFunction() is called.
+2.] Inside the function, a variable x is initialized as an empty string.
+3.] A for loop is used to iterate from 1 to 5 .
+4.] we have stored the value of i in variable x along with the text "The number is " 
+    and a <br> tag that breaks.
+5.] Here in this line x= x + "The number is " + i + "<br>"; the value of x is updated 
+    in each iteration by appending the new string to the existing value of x.
+6.] Appending means adding the new string to the end of the existing string.
+
+-->
+
+<br><br>
+
+<!--
