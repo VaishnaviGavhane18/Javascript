@@ -1,0 +1,83 @@
+<!------------------------------------------------------------------------------------------
+ b.]FOR-OF LOOP :
+-------------------------------------------------------------------------------------------
+ 
+ *USE :
+  Ans: when you have collection like list or array we use for-of loop.
+
+
+ (Syntax):
+ for (data_variable of iterable) 
+ {
+    // code to be executed
+ }
+
+ IMPORTANT NOTE :-
+ ----------------
+ 1.] In for-of loop object is not used and array is used beacuse in for-of loop we dont read 
+     the index we read the value directly.
+ 2.] 
+ Eg:1]
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<script>
+
+  function myFunction()
+{
+var txt="";
+var cars=["BMW","Volvo","Saab","Ford"];
+
+for (const y of cars) 
+{
+  txt= txt + y + "<br>";
+}
+
+document.getElementById("demo").innerHTML=txt;
+}
+</script>
+
+<body>
+  <p>for-of-loop with array ex:</p>
+    <button onclick="myFunction()">Try it</button>
+  <p id="demo"></p>
+</body>
+</html>
+
+
+
+<!----------------------------------------------------------------------------------------
+FOR-OF LOOP using array and list:
+------------------------------------------------------------------------------------------
+Eg:1]
+-->
+
+<!DOCTYPE html>
+<html>
+<script>
+
+function myfunction()
+{
+var txtt="";
+
+var carsz=["BMW","Volvo","mercedez","Ford"];
+
+txtt = txtt + "<ul type='square'>";
+
+for (const x of carsz) 
+{
+  txtt= txtt +"<li>" + x + "</li>" + "<br>";
+}
+txtt = txtt + "</ul>";
+document.getElementById("demoo").innerHTML=txtt;
+}
+</script>
+
+ <body>
+  <p>for-of-loop with array and list ex:</p>
+    <button onclick="myfunction()">Try it</button>
+  <p id="demoo"></p>
+ </body>
+ </html>
