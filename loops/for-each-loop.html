@@ -1,0 +1,67 @@
+ <!----------------------------------------------------------------------------------------
+ c.] For-each Loop:
+ ------------------------------------------------------------------------------------------
+ * USE :
+ Ans:
+ 
+ (syntax):
+  arrayname.forEach ( e => {
+    // code to be executed for each element
+  });
+
+  EXPLANATION:
+  ------------
+  1.] First of all we will write the array name.
+  2.] Then we will write the forEach method.
+  3.] e = element . it reads each element of the array one by one.
+  
+
+ IMPORTANT NOTE :-
+ ---------------
+  * It gives us a new array.
+  * look at the backet it is different from other loops.
+
+
+ Eg:1]
+-->
+
+<!DOCTYPE html>
+<html>  
+<script>
+
+function myfunction()
+{       
+var txt="";
+var cars=["BMW","Volvo","Saab","Ford"];  // array
+cars.forEach ( e => {       // e = element
+  txt=(txt + e + "<br>"). toUpperCase(); // converting to uppercase,it is a method.
+});
+
+
+document.getElementById("demo").innerHTML=txt;
+}
+
+//eg=2:(hard)
+arr=["Bilbo", "Gandalf", "Nazgul"];
+
+  arr.forEach(e => {
+    console.log(e);         
+  });
+
+  arr.forEach((item, index, arr) => {     // here we want item,index as well as array.
+                    
+   //console.log (item+" is at index "+index);
+    console.log(`${item.toUpperCase()} is at index ${index} in ${arr}`);
+ }); 
+
+</script>
+<body>
+    <p>for-each loop ex:</p>
+    <button onclick="myfunction()">Try it</button>
+    <p id="demo"></p>
+
+
+
+
+</body>
+</html>
