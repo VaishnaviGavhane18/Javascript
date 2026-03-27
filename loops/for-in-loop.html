@@ -1,0 +1,94 @@
+<!--
+------------------------------------------------------------------------------------------
+a.] FOR-IN LOOP :
+------------------------------------------------------------------------------------------
+ *USE :
+  Ans: when you have collection like list or array along with indexing of object or array 
+  we use for-in loop.
+
+(Syntax):
+for (index_variable in object)    //it reads the index
+{
+    // code to be executed
+}
+
+Eg:1]
+-->
+
+<!DOCTYPE html>
+<html>
+<script>
+
+function myfunction()
+{
+var x="";
+var txt="";
+var person={fname:"John",lname:"Doe",age:25}; 
+
+ for (y in person)
+ {
+   txt=txt + person[y]+" ";
+ }
+  document.getElementById("demoo").innerHTML=txt;
+}
+</script>
+
+<body>
+ <p>for-in-loop ex with object:</p>
+    <button onclick="myfunction()">Try it</button>
+    <p id="demoo"></p>
+</body>
+</html>
+
+<!-- 
+OUTPUT :- 
+------- 
+John Doe 25
+
+
+IMPORTANT NOTE :-
+---------------
+1.] console.log (person["fname"]);  // Output: John , when we have to acess it directly we 
+    use double quotes as the property is a string.Here we are directly reading the property.
+2.] person[y]  // Output: John , Here we are reading the property through variable so we 
+    don't use double quotes. Means the string fname , lname... are stored in the variable y one by one while
+    so it has became variable.Therefore we don't use double quotes and write the variable
+    name only.
+
+
+EXPLANATION :-
+------------
+1.] When the button is clicked, the function myfunction() is called.
+2.] Inside the function, variable y is declared to hold the property names of the object.
+3.] An object named person is created with three properties: fname, lname, and age.
+4.] A for-in loop is used to iterate over the properties of the person object.
+5.] In each iteration, the value of the current property (person[y]) is appended to the txt
+    variable along with a space using(" ").
+6.] Finally, the concatenated string stored in txt is displayed in the HTML element with
+    the id "demoo".
+
+
+Eg:2] WITH ARRAY :-
+-->
+<BR><BR>
+<script> 
+  function myFunction()
+{
+var txt="";
+
+var cars=["BMW","Volvo","Saab","Ford"];
+
+for (const x in cars) 
+{
+  txt=txt + x +" " + cars[x]+"<br>"; // x is the index here it is giving us the index of array
+}
+
+document.getElementById("demo").innerHTML=txt;
+}
+</script>
+
+<body>
+    <p>for-in-loop with array ex:</p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo"></p>
+</body>
