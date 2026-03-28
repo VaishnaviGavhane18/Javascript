@@ -1,0 +1,40 @@
+<!----------------------------------------------------------------------------------------
+While Loop :
+------------------------------------------------------------------------------------------
+* USE :
+Ans: when you dont know the number of repetetion we use while loop.
+     It repeat until user wants it to repeat.
+
+(Syntax):
+
+step1: Initialization
+step2: While(condition)
+step3: code to be executed
+step4: Increment/Decrement
+         
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+<script>
+function myFunction()
+{
+var x="",i=0;    // step1: Initialization
+while (i<5)       // step2: While(condition)
+  {
+  x = x + "The number is " + i + "<br>";   // step3: code to be executed
+  i++;            // step4: Increment/Decrement
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+<body>
+   <p>While-loop ex:</p>
+   <button onclick="myFunction()">Try it</button>
+   <p id="demo"></p>
+
+</body>
+</html>
