@@ -1,0 +1,42 @@
+<!----------------------------------------------------------------------------------------
+do-while Loop :
+------------------------------------------------------------------------------------------
+* USE :
+Ans: when you dont know the number of repetetion we use while loop.
+     It repeat until user wants it to repeat.
+     But here we allow to perfom fisrtly and then check the condition.Eg:password validation.
+
+
+(Syntax):
+
+step1: Initialization
+step2: code to be executed
+step3: Increment/Decrement
+step4: condition
+         
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to loop through a block of as long as <em>i</em> is less than 5.</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="",i=0;   // step1: Initialization
+do
+  {
+  x=x + "The number is " + i + "<br>";  // step2: code to be executed
+  i++;       // step3: Increment/Decrement
+  }
+while (i<5)   // step4: condition
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
