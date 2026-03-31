@@ -1,0 +1,87 @@
+<!-----------------------------------------------------------------------------------------
+ BREAK STATEMENT :
+ ------------------------------------------------------------------------------------------
+ 
+ * USE :
+  Ans: when you want to immediately exit the loop you can use break statement.
+ 
+ (Syntax):
+ break;   // it is used to exit from the loop.
+ break label_name;  // it is used to exit from the loop along with label name.
+ 
+ Eg:1] easy eg
+ ------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford","Mercedez"];  //array
+list:     // This is called as break label, so we have given the lable name as (list).
+{
+document.write(cars[0] + "<br>"); 
+document.write(cars[1] + "<br>"); 
+document.write(cars[2] + "<br>"); 
+break list;   // here the break is used along with label name to exit or stop .
+document.write(cars[3] + "<br>"); 
+document.write(cars[4] + "<br>"); 
+document.write(cars[5] + "<br>"); 
+}
+</script>
+
+
+<!--EG:1 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<script type="text/javascript">
+	
+	while(1){ 
+		var n=parseInt(prompt("Enter any number"));
+		var sq=n*n;    
+		alert("The square of "+n + "="+sq);  
+		var ans=confirm("Do you want to check another number");  
+		if(ans==false)  
+		{
+			break;    
+		}
+	}
+</script>
+
+<!--
+EXPLANATION
+1.] Firstly we have created an infinite while loop. 1 means true.
+2.] Then we have taken the input from the user using prompt.
+3.] Then we have created a variable (sq) to store the square of the number.
+4.] Then we have displayed the square of the number using alert.
+5.] Then we have asked the user whether he wants to check another number or not using 
+    confirm box.
+6.] If the user clicks on (cancel) then ans will be false and the break statement will be
+    executed which will exit the loop.
+7.] If the user clicks on (ok) then ans will be true and the loop will continue executing.
+
+
+-->
+</head>
+<body>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
