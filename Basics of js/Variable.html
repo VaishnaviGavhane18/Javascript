@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <!-- Variable:-
+       1. Variable is a container that holds the data value.
+       2. We can store any type of data in variable like string, number, boolean etc.
+       3. We can declare variable by using var, let and const keyword.
+       4. We can use the variable name to access the value stored in it.
+       5. We can also change the value of variable by reassigning it. 
+       6. variable name should be meaningful and should not start with number and should not contain 
+          special characters except _ and $.
+       7. We can also declare multiple variables in one line by separating them with comma.
+       8. below is the example of variable declaration and usage in javascript.
+
+-->
+
+    <script>
+
+// Eg:1
+        var rollno=1;
+        var name="Vanu";  
+        var isStudent=true;
+        var city; //undefined variable => it is a variable that has been declared but has not been assigned any value yet.
+        var institute=null; //null variable => it is a variable that has no value and we will assign it later.
+        console.log(rollno);
+        console.log(name);  
+        console.log(isStudent); 
+        console.log(city);
+        console.log(institute); 
+
+
+
+
+// Eg:2
+        var city="Navi mumbai";
+        var institute="Awdiz";
+        var name="Vaishnavi";
+
+    console.log(city + "\n" + institute + "\n" + name);  //  \n is used to print the value in new line.
+
+
+   
+//////////important points about variable in javascript:-/////////
+
+// There are three types of variable in javascript:-
+//  var                                  |             let                                                 |         const 
+// global scope                          |             block scope                                         |         constant/block scope
+// can be accessed anywhere in the code. |  can be accessed only inside the block in which it is declared. | cannot be reassigned a new value.
+// can be redeclared and updated.        |  cannot be redeclared but can be updated.                       | cannot be redeclared and cannot be updated.
+
+
+// Eg:3
+ var center="Vashi"; // var is a global variable and it can be accessed anywhere in the code.
+ const pi=3.14;     // const is a constant variable and it cannot be reassigned a new value.
+ let namee="Vaishnavi"; // let is a block scope variable and it can be accessed only inside the block in which it is declared,
+ // but here as it is declared in the global scope so it can be accessed anywhere in the code.
+
+ function myFunction()
+ {
+ var insti ="Awdiz";
+ let batch="FSD"; // let and const are block scope variable, so they can be accessed only inside the function or block in which they are declared.
+// pi=3.15; // This will cause an error because pi is a constant and it cannot be reassigned a new value.
+  
+ }
+ console.log(center); // This will work because center is a global variable and it can be accessed anywhere in the code.
+ console.log(namee); // This will work because name is a global variable and it can be accessed anywhere in the code.
+// console.log(insti); // This will cause an error because insti is a local variable and it can be accessed only inside the function in which it is declared.
+// console.log(batch); // This will cause an error because batch is a local variable and it can be accessed only inside the function in which it is declared.
+// console.log(pi); // This will work because pi is a global variable and it can be accessed anywhere in the code.
+
+
+
+// IMP:-(HOISTING)
+//1.] let variable cannot be accessed before its declaration, it will give a reference error. This is called temporal dead zone.
+//2.] var variable can be accessed before its declaration, it will give undefined. This is called hoisting.
+//3.] const variable cannot be accessed before its declaration, it will give a reference error. This is called temporal dead zone.
+
+//Eg:4
+//console.log(age); // This will give a reference error because age is declared using let and it cannot be accessed before its declaration.
+console.log(Name); // This will give a reference error because Name is declared using var and it cannot be accessed before its declaration.
+let age=25;
+var Name="Vaishnavi";
+console.log(age); // This will work because age is declared before it is accessed.
+
+
+
+</script>
+
+<body>
+</html>
