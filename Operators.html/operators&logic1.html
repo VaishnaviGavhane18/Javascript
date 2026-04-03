@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     function addnumbers() {
+      var val1 = parseInt(document.getElementById("value1").value); // parseInt() is a built-in function in JavaScript that parses a string and returns an integer. It takes the value from the input field with id "value1", converts it to an integer, and assigns it to the variable val1.
+      var val2 = parseInt(document.getElementById("value2").value);
+      var result = document.getElementById("result");
+      result.value =eval("val1 + "+" + val2");
+     }
+
+     /*
+     Eval:
+     The eval() function evaluates a string as JavaScript code.
+     It can be used to execute a string of code or to evaluate an expression.
+     suppose we have a code like this:(no parseint or parsefloat used)
+     val1 = 5, val2 = 3, 
+     var result = eval("val1 + "+" + val2"); 
+     then the result will be 53 because it will concatenate the values as string and give us "5 + 3" instead of 8.
+     But if we use eval along with parseInt then it will evaluate the expression and give us the correct result which is 8.
+    
+     */
+    </script>
+</head>
+<body>
+    Value1=
+    <input type="text" id="value1" name="value1" />
+    Value2=
+    <input type="text" id="value2" name="value2"/>
+    <input type="button" id="submit" value="click here" onclick="addnumbers()"/>
+    Result=
+    <input type="text" id="result" name="result" />
+</body>
+</html>
