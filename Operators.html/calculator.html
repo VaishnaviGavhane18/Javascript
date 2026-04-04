@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       form{
+        height:360px;
+        width:30%;
+        
+        margin: auto;
+        margin-top: 150px;
+        border-radius: 9px;
+        background-color: rgb(10, 177, 228);
+
+       }
+
+       .calculator{
+        height:100px;
+        width:100%;
+      
+        text-align: center;
+        align-content: center;
+        color:white;
+       
+       }
+
+       input{
+        height:30px;
+        width:90%;
+        border-radius: 5px;
+        background-color: white;
+        border: none;
+        margin:8px 20px;
+       }
+
+       #operators{
+        margin:auto;
+        height:35px;
+        width:70%;
+        border-radius: 5px;
+        background-color: white;
+        border:none;
+        margin:8px 20px;
+
+       }
+
+         button{
+         
+          height:35px;
+          width:15%;
+          border-radius: 5px;
+          background-color: rgb(189, 30, 30);
+          border:none;
+          color:white;
+         }
+
+        
+    </style>
+     
+    
+    <script>
+
+     function myfunction() {
+     var firstvalue = document.getElementById("firstval").value;
+     var secondvalue = document.getElementById("secondval").value;
+     var operator = document.getElementById("operators").value;
+     var result = document.getElementById("result");
+     result.value = eval(firstvalue + operator + secondvalue); // eval() is a built-in function in JavaScript that evaluates a string as JavaScript code and executes it. In this case, it takes the first value, operator, and second value, concatenates them into a string, and evaluates it as a mathematical expression to get the result.
+       
+     }
+     // Eval 
+    //eg : firstvalue = 5, secondvalue = 10, operator = "+" 
+    // eval(5 + "+" + 10) => 15
+    // if we dont uae eval then it will concatenate the values as string and give us "5+10" instead of 15.
+     </script>
+    
+
+    </script>
+</head>
+<body>
+    <form>
+     <div class="calculator">
+        <h2>CALCULATOR</h2>
+     </div>
+
+     <input type="text" id="firstval" name="firstval"/><br>
+     <input type="text" id="secondval" name="secondval"/><br>
+
+    
+      <select id="operators">
+        <option value="-">-</option>
+        <option value="+">+</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+       </select>
+
+       <button type="button" onclick="myfunction()">Count</button>
+    
+       <input type="text" id="result" name="result"/>
+    </form>
+</body>
+</html>
