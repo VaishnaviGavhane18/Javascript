@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ // Qno 1: Write a program to reverse a string "hello" ?
+    <script>
+        let word="hello";
+        let reversed="";
+         
+        for (let i=0; i<word.length; i++) {
+            reversed=word[i]+reversed;
+            console.log(word[i]);              // returns each character of the string in a new line
+        }
+        console.log(reversed);                 // returns the reversed string
+
+
+
+
+
+ // Qno 2.1: Write a program to reverse an array [1,2,3,4,5,6,7,8,9,10] ? 
+// There are 2 ways to solve it.
+
+        let nums=[1,2,3,4,5,6,7,8,9,10];
+        reversedd=nums.reverse();
+        console.log(reversedd);                 // returns the reversed array
+
+        
+// Qno 2.2: Write a program to reverse an array [1,2,3,4,5,6,7,8,9,10] ?
+
+  let numbers=[1,2,3,4,5,6,7,8,9,10];
+  let reverseddd=[];
+    for (let i=0; i < numbers.length; i++) {
+        reverseddd=numbers[i]+  "\n"  + reverseddd;
+                      
+    }
+    console.log(reverseddd);                 // returns the reversed array
+
+    </script>
+</body>
+</html>
