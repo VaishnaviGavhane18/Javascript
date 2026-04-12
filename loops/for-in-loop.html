@@ -23,11 +23,12 @@ function myfunction()
 {
 var x="";
 var txt="";
-var person={fname:"John",lname:"Doe",age:25}; 
-
- for (y in person)
+var person={fname:"John",lname:"Doe",age:25}; // "john" it is string therefore "" is needed.
+//   x is variable and x=property
+ for (x in person)
  {
-   txt=txt + person[y]+" ";
+    //       x - this will give us property name
+   txt=txt + x + ": " + person[x]+"<br> ";    //[x] is string variable so dont need to write in ["x"] because it is variable and it is storing the property name one by one while iterating through the loop.
  }
   document.getElementById("demoo").innerHTML=txt;
 }
@@ -59,10 +60,10 @@ IMPORTANT NOTE :-
 EXPLANATION :-
 ------------
 1.] When the button is clicked, the function myfunction() is called.
-2.] Inside the function, variable y is declared to hold the property names of the object.
+2.] Inside the function, variable x is declared to hold the property names of the object.
 3.] An object named person is created with three properties: fname, lname, and age.
 4.] A for-in loop is used to iterate over the properties of the person object.
-5.] In each iteration, the value of the current property (person[y]) is appended to the txt
+5.] In each iteration, the value of the current property (person[x]) is appended to the txt
     variable along with a space using(" ").
 6.] Finally, the concatenated string stored in txt is displayed in the HTML element with
     the id "demoo".
@@ -74,16 +75,17 @@ Eg:2] WITH ARRAY :-
 <script> 
   function myFunction()
 {
-var txt="";
+var txxt="";
 
 var cars=["BMW","Volvo","Saab","Ford"];
 
-for (const x in cars) 
+txxt=txxt +"<ul>";  // starting of unordered list
+for (const y in cars) 
 {
-  txt=txt + x +" " + cars[x]+"<br>"; // x is the index here it is giving us the index of array
-}
-
-document.getElementById("demo").innerHTML=txt;
+  txxt=txxt +"<li>"+ y +" " + cars[y]+"</li>"; // y is the index here it is giving us the index of array
+} 
+txxt=txxt +"</ul>";  // ending of unordered list
+document.getElementById("demo").innerHTML=txxt;
 }
 </script>
 
