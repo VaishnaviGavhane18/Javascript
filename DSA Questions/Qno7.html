@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Qno7: Write a JavaScript program to find the largest number in an array.
+        let num=[1, 5, 7, 3, 9, 2];
+
+        let largest =num[0];
+
+        function largestnum(num) {
+            for ( let i=1 ; i < num.length ; i++ ) {
+                if ( num [i] > largest) {
+                    largest = num[i];
+                }
+            }
+            return largest;
+}        
+
+console.log(largestnum(num));
+    </script>
+</body>
+</html>
