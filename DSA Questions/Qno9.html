@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     let num=[1, 2, 8, 7, 8, 3, 2, 8];
+
+     function removeDuplicates(num) {
+        let uniqueNum = [];
+
+        for (let i = 0; i < num.length; i++) {
+            if (!uniqueNum.includes(num[i])) {
+                uniqueNum.push(num[i]);
+            }
+        }
+        return uniqueNum;
+     }  
+     console.log(removeDuplicates(num));
+
+
+
+     let str="interview";
+
+function countvowels(str) {
+    let vowels="aeiouAEIOU";
+
+let count=0;
+    for(let i=0; i<str.length;i++) {
+        if(vowels.includes(str[i])) {     // checks if string vowels contains character str[i] ,vowels madhe check karyach str[i] ch value ahe ka? 
+        count++;                          
+    }
+}
+return count;
+}
+console.log(countvowels(str));
+
+// "aeiouAEIOU".includes("i")  // true
+//"aeiouAEIOU".includes("n")  // false
+
+
+const arr = [1, [2, 3], [4, 5]];
+console.log(arr.flat()); 
+// Output: [1, 2, 3, 4, 5]
+
+    </script>
+</body>
+</html>
