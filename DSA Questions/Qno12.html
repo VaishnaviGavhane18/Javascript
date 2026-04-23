@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function myFunction(num) {
+    var num=[2,-4,5,0,7,-5];
+
+   var txt="";
+   
+ 
+ for(i=0;i<num.length;i++) {
+ if(num[i] === 0) {
+     txt= txt + "The number is Zero<br>"
+ }
+ 
+ else if( num[i] <= 0) {
+     txt= txt + "The number is Negative<br>"
+ }
+ 
+ else {
+     txt= txt + "The number is positive<br>"
+ }
+
+ }
+ 
+ document.getElementById("demo").innerHTML = txt;
+}
+    </script>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>   
+      
+</body>
+</html>
