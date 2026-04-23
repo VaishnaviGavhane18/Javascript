@@ -1,0 +1,53 @@
+<!--Detail pdf is given on this as there are alot of modifiers and we have seen just 3 -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Click the button to do a case-insensitive search for "Keerti" in a string.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction()
+{
+var str = "Visit Awdiz";
+var pattern1 = /awdiz/i;        
+var result = str.match(pattern1);
+document.getElementById("demo").innerHTML=result;
+}
+</script>
+
+<!--
+EXPLANATION:
+1.] In var str we have written some words .
+2.] In var pattern1 =/awdiz/; ->  here we are checking whether that words exist in it 
+    here in this variable and the fisrt slash (/) refers to pattern and the second slash 
+    refers to modifiers (/awdiz)=pattern and (/i)=modifiers , and then we write the 
+    modifier we want to use.
+3.] Here we have written modifier as (/i)- it represent case insensitiveness means we will
+    definately check the the patterns but we will no consider the case . It does not matter
+    whether the case is small or big just the word should be there .
+4.] After that we are checking whether the var str matches var pattern1 .match is string func.
+5.]  it checks how many times the particular code appers.
+      EG: With g modifier: 
+      *It checks how many times the particular code appers. It also check the sensitiveness. 
+
+       var str = "Is this all there is";
+       var pattern1 = /awdiz/g;        
+       var result = str.match(pattern1);
+
+       O/P: Explanation:
+       1.] Here the word (is) appears for 3 times but the o/p will show 2 times because we 
+           are matching the words with (is) and not the (Is).
+       2.] And if we write both the modifiers ie. (i) and (g) together such as  
+
+       
+       var str = "Is this all there is";
+       var pattern1 = /awdiz/gi;        
+       var result = str.match(pattern1);
+
+       3.] The o/p will show 3 times because we have written both (ig) together as (i) will
+           work on insenstiveness so it will show 3 (is) whether small or capital.
+-->
+</body>
+</html>
