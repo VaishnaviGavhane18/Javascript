@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var pattern1=new RegExp("e");
+
+document.write(pattern1.exec("The best things in life are free"));
+</script>
+
+<!--
+EXPLANATION:
+1.] Here we check the value is there or not but if it is there it returns the value itself
+    it does not return true or false like pattern.test
+2.] If we write (o) in place of (e) it will give us o/p = null as (o) dose not exixt in the
+    sentence.
+3.] Summary: The difference between (varname.test) ie.pattern1.test and (varname.exec) ie
+    pattern1.exec is that .test return true or false and .exec returns the value itself .
+
+-->
+</body>
+</html>
