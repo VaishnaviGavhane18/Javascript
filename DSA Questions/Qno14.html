@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+ 
+function userday () {
+
+  var x="";
+ var d=new Date().getDay();
+ switch(d)
+ {
+
+    case 0:
+      x="sunday";
+      break;
+ 
+  case 1:
+      x="monday";
+      break;
+  
+  
+  case 2:
+      x="tuesday";
+      break;
+  
+  
+  case 3:
+      x="wednesday";
+      break;
+  
+
+  case 4:
+      x="thursday";
+      break;
+ 
+
+ case 5:
+      x="friday";
+      break;
+ 
+
+ case 6:
+      x="saturday";
+      break;
+ 
+
+ 
+
+ 
+ }
+  document.getElementById("demo").innerHTML= x;
+}
+    </script>
+</body>
+<button onclick="userday()">Try it</button>
+<p id="demo"></p>
+</html>
