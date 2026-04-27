@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+ let n =4;
+ let isPrime = true;  // Assume n is prime until we find a divisor
+
+ if (n <= 1) {              // 1,0,-1,-2,-3........ are not prime numbers   
+    isPrime = false;        // because prime numbers are defined as greater than 1
+ }
+
+ for (let i = 2; i < n; i++) {
+    if (n % i == 0) {                // 4 % 2 ==0 → 4 is divisible by 2 → not prime
+        isPrime = false;
+        break;
+    }
+ }
+
+ if (isPrime) {
+    console.log("Prime");
+ } else {
+    console.log("Not Prime");
+ }
+        
+
+    </script>
+
+
+    <!-- 🔹 Line-by-line
+
+let n = 7;
+👉 Number to check
+
+let isPrime = true;
+👉 Assume it's prime first
+
+if (n <= 1)
+👉 Numbers ≤ 1 are NOT prime
+
+Loop:
+
+for (let i = 2; i < n; i++)
+
+👉 Check from 2 up to n-1
+
+🔹 Inside loop
+if (n % i == 0)
+
+👉 % means remainder
+👉 If remainder = 0 → divisible
+
+If divisible:
+
+isPrime = false;
+break;
+
+👉 Not prime
+👉 Stop loop early (no need to check further)
+
+🔹 Example (n = 7)
+7 ÷ 2 → not divisible
+7 ÷ 3 → not divisible
+7 ÷ 4 → not divisible
+7 ÷ 5 → not divisible
+7 ÷ 6 → not divisible
+
+👉 No divisor found → ✅ Prime
+
+🔹 Example (n = 8)
+8 ÷ 2 → divisible
+
+👉 Immediately:
+
+isPrime = false
+loop stops
+
+👉 ❌ Not Prime-->
+</body>
+</html>
