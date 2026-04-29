@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//Qno 18: Write a program to print numbers from 1 to 100 but skip the number 50 ?
+
+
+function MyFunction() {
+ let result="";
+
+ for( let i=1; i<=100; i++) {
+    if( i === 50) {
+       continue;
+    }
+    
+    else {
+        result= result+i + "<br>";
+        console.log(result)
+    }
+   
+ }
+  document.getElementById("demo").innerHTML= result;
+}
+
+    </script>
+        <button onclick="MyFunction()">click me</button>
+    <p id="demo"></p>   
+
+</body>
+</html>
