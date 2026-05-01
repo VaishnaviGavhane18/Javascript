@@ -1,0 +1,60 @@
+<!--------------------------------------------------------------------------------------------
+ Try-catch :
+-----------------------------------------------------------------------------------------
+ * USE :
+ Ans: It is used to generate errors .It runs even when there is error.
+
+ (syntax):
+
+ try 
+ {
+   // code to be executed 
+ }
+ catch(err)
+ {
+   // code to be executed 
+ }
+
+ Eg:1.]
+-->
+
+
+<!----------------------------------------------------------------------------------------
+ THROW EXAMPLE
+ -----------------------------------------------------------------------------------------
+ *USE : 
+  1.] It is used to throw the error manually .
+  2.] When we put password sometimes we put only number so the error occurs that we should 
+      also put letter or it should be of 8 characters , so to make such thing we use throw
+-->
+
+<html>
+<head>
+<script>
+function myFunction()
+{
+var y=document.getElementById("mess");
+y.innerHTML=" ";
+try
+  { 
+  var x=document.getElementById("demo").value;
+  if(x=="")    throw "empty";
+  if(isNaN(x)) throw "not a number";
+  if(x>10)     throw "too high";
+  if(x<5)      throw "too low";
+  }
+catch(err)
+  {
+  y.innerHTML="Error: " + err ;
+  }
+}
+</script>
+</head>
+<body>
+
+<p>Please input a number between 5 and 10:</p>
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="mess"></p>
+</body>
+</html>
