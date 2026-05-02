@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Click the button to locate where "locate" first occurs.</p>
+<p id="p2">0</p>
+<p id="p3">0</p>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction()
+{
+var str=document.getElementById("p1").innerHTML;
+var n=str.indexOf("locate");       // It will give value when first time the word occurs.
+document.getElementById("p2").innerHTML=n+1;
+
+var n2=str.lastIndexOf("locate"); // It will give the value of last time this word occur
+document.getElementById("p3").innerHTML=n2+1;   // It counts till before that word so +1 means it will give value when the word start.
+}
+
+// imp to note:
+// 1.] indexOf() and lastIndexOf() are case sensitive.
+// 2.] Counting starts from 1 and not 0 like array.
+// 3.] Counting looks like:
+
+// Click the button to locate where "locate" first occurs
+// 123456789.............................................
+
+</script>
+
+</body>
+</html>
