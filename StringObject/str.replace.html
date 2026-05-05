@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to replace "Microsoft" with "Google" in the paragraph below:</p>
+
+<p id="demo">Please visit Microsoft!</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction()
+{
+var str=document.getElementById("demo").innerHTML; 
+var n=str.replace("Microsoft","Google");
+document.getElementById("demo").innerHTML=n;
+console.log(str);  // O/P = Please visit Microsoft! , because string is immutable it does 
+                   //       not make changes.
+}
+</script>
+ 
+<!-- String is immutable means the changes are not made in it so we have taken new variable 
+ as var n= str and making changes in it.-->
+</body>
+</html>
